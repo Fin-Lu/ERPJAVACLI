@@ -1,6 +1,12 @@
 package ERP.menu;
 
 import java.util.Scanner;
+import ERP.kalkulation.Etsy_Kalkulator_CLI;
+import ERP.kalkulation.Offline_Kalkulator_CLI;
+import ERP.kalkulation.Produktionskosten_Kalkulator_CLI;
+import ERP.kalkulation.B2B_Kalkulator_CLI;
+
+import jdk.jshell.ImportSnippet;
 
 public class ERP_Hauptmenue_CLI {
 
@@ -53,10 +59,31 @@ public class ERP_Hauptmenue_CLI {
         int auswahl = leseInt();
 
         switch (auswahl) {
-            case 1 -> System.out.println("Produktkosten startet...");
-            case 2 -> System.out.println("Etsy startet...");
-            case 3 -> System.out.println("Offline startet...");
-            case 4 -> System.out.println("B2B startet...");
+            case 1 ->{
+                System.out.println("Produktkosten startet...");
+
+                Produktionskosten_Kalkulator_CLI produkt = new Produktionskosten_Kalkulator_CLI();
+                produkt.start();
+            }
+            case 2 ->{
+                System.out.println("Etsy startet...");
+
+                // hier wird auf die Etsy Kalkulation zugegriffen
+                Etsy_Kalkulator_CLI etsy = new Etsy_Kalkulator_CLI();
+                etsy.start();
+            }
+
+            case 3 -> {
+                System.out.println("Offline startet...");
+
+                Offline_Kalkulator_CLI offline = new Offline_Kalkulator_CLI();
+                offline.start();
+            }
+            case 4 ->{
+                System.out.println("B2B startet...");
+                B2B_Kalkulator_CLI b2b = new B2B_Kalkulator_CLI();
+                b2b.start();
+            }
             default -> System.out.println("Ungültige Auswahl!");
         }
     }

@@ -42,17 +42,16 @@ public class Etsy_Kalkulator_CLI {
             // Gewinn Auswahl
             System.out.println("\nGewinn wählen:");
             System.out.println("1 - 30%");
-            System.out.println("2 - 40%");
-            System.out.println("3 - 50%");
-            System.out.println("4 - 60%");
-            System.out.println("5 - 70%");
-            System.out.println("6 - 80%");
-            System.out.println("7 - 90%");
-            System.out.println("8 - 100%");
+            System.out.println("2 - 35%");
+            System.out.println("3 - 40%");
+            System.out.println("4 - 45%");
+            System.out.println("5 - 50%");
+            System.out.println("6 - 55%");
+            System.out.println("7 - 60%");
 
             int auswahl = Integer.parseInt(scanner.nextLine());
 
-            if (auswahl < 1 || auswahl > 8) {
+            if (auswahl < 1 || auswahl > 7) {
                 System.out.println("\nFEHLER: Ungültige Auswahl!");
                 return;
             }
