@@ -50,7 +50,7 @@ public class B2B_Kalkulator_CLI {
                 System.out.println("5 - 70%");
                 System.out.println("6 - 80%");
                 System.out.println("7 - 90%");
-                System.out.println("8 - 100%");
+                System.out.println("8 - 800%");
 
                 int auswahl = Integer.parseInt(scanner.nextLine());
 
@@ -59,7 +59,8 @@ public class B2B_Kalkulator_CLI {
                     return;
                 }
 
-                double gewinnProzent = 20 + (auswahl * 10);
+                double[] gewinnOptionen = {30, 40, 50, 60, 70, 80, 90, 800};
+                double gewinnProzent = gewinnOptionen[auswahl - 1];
 
                 // Konstanten
                 final double stromPreis_kWh = 0.36;
