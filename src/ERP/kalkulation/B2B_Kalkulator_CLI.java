@@ -59,7 +59,7 @@ public class B2B_Kalkulator_CLI {
                     return;
                 }
 
-                double[] gewinnOptionen = {30, 40, 50, 60, 70, 80, 90, 800};
+                double[] gewinnOptionen = {30, 40, 50, 60, 70, 80, 90, 100};
                 double gewinnProzent = gewinnOptionen[auswahl - 1];
 
                 // Konstanten

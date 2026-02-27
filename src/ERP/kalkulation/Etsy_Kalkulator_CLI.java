@@ -56,7 +56,8 @@ public class Etsy_Kalkulator_CLI {
                 return;
             }
 
-            double gewinnProzent = 20 + (auswahl * 10);
+            double[] gewinnOptionen = {30, 35, 40, 45, 50, 55, 60};
+            double gewinnProzent = gewinnOptionen[auswahl - 1];
 
             // Konstanten
             final double stromPreis_kWh = 0.36;
